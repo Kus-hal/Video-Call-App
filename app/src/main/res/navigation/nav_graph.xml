@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/news_nav_graph"
+    app:startDestination="@id/loginFragment">
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.videocallapp.ui.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_phoneBookFragment"
+            app:destination="@id/phoneBookFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/callFragment"
+        android:name="com.example.videocallapp.ui.CallFragment"
+        android:label="fragment_call"
+        tools:layout="@layout/fragment_call" />
+    <fragment
+        android:id="@+id/phoneBookFragment"
+        android:name="com.example.videocallapp.ui.PhoneBookFragment"
+        android:label="fragment_phone_book"
+        tools:layout="@layout/fragment_phone_book" >
+        <action
+            android:id="@+id/action_phoneBookFragment_to_callFragment"
+            app:destination="@id/callFragment" />
+    </fragment>
+</navigation>
